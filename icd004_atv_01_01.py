@@ -18,10 +18,10 @@ def sum_matrix(m1, m2):
     n = len(m1)
 
     for i in range(n):
-        op +=1
+        op += 1
         result.append([])
         for j in range(n):
-            op +=1
+            op += 1
             result[i].append(m1[i][j] + m2[i][j])
 
     return result, op
@@ -47,7 +47,7 @@ def mul_matrix(m1, m2):
 
     return result, op # retornar a matriz e o numero de operações
 
-e = 1000
+e = 5000
 
 sum_tinicial = time()
 for p in range(e):
@@ -59,7 +59,7 @@ print("Matriz B:",B)
 print("\n==== Soma Matricial ====")
 print("Matriz C:", C)
 sum_tempo = sum_tfinal - sum_tinicial
-print(f"tempo de execução para {e} execuções: {sum_tempo:.4f}. nº Operação dominante: {sum_op}")
+print(f"tempo de execução para '{e}' execuções: {sum_tempo:.4f}. nº Operação dominante: {sum_op}")
 
 mul_tinicial = time()
 for p in range(e):
@@ -68,8 +68,8 @@ mul_tfinal = time()
 mul_tempo = mul_tfinal - mul_tinicial
 print("\n==== Multiplicação Matricial ====")
 print("Matriz C:", C)
-print(f"tempo de execução para {e} execuções: {mul_tempo:.4f}. nº Operação dominante: {mul_op}")
-print(f"\nRelação (Multiplicação/Soma): {mul_tempo / sum_tempo}" )
+print(f"tempo de execução para '{e}' execuções: {mul_tempo:.4f}. nº Operação dominante: {mul_op}")
+print(f"\nRelação (Multiplicação/Soma): { mul_tempo / sum_tempo }" )
 
 print('''
 Logo, podemos notar que a operação de multiplicação tem maior número de operações dominantes realizadas
